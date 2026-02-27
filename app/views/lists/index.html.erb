@@ -1,0 +1,21 @@
+<div class="lists-header">
+  <h1>My Watch Lists</h1>
+  <hr class="lists-divider">
+  <%= link_to "New List", new_list_path, class: "btn-new-list" %>
+</div>
+
+<div class="lists-container">
+  <% @lists.each do |list| %>
+    <%= link_to list_path(list), class: "list-card" do %>
+      <h2><%= list.name %></h2>
+      <div class="list-movies">
+        <% list.bookmarks.includes(:movie).each do |bookmark| %>
+          <div class="movie-thumb">
+            <img src="<%= bookmark.movie.poster_url %>" alt="<%= bookmark.movie.title %>">
+            <p><%= bookmark.movie.title %></p>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  <% end %>
+</div>

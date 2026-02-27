@@ -19,11 +19,18 @@
     <link rel="apple-touch-icon" href="/icon.png">
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
-    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar">
+      <a href="/" class="nav-logo">🍿</a>
+      <div class="nav-links">
+        <%= link_to "Toutes les listes", lists_path %>
+        <%= link_to "Tous les films", movies_path %>
+      </div>
+    </nav>
+  <%= yield %>
   </body>
 </html>

@@ -1,0 +1,83 @@
+.lists-header {
+  padding: 40px 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lists-header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+
+.lists-divider {
+  border: none;
+  border-top: 10px solid white;
+  margin: 0;
+  width: 100%;
+}
+
+.btn-new-list {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid white;
+  color: white;
+  background: transparent;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  align-self: flex-start;
+  transition: background 0.2s, color 0.2s;
+
+  &:hover {
+    background: white;
+    color: black;
+  }
+}
+
+.lists-container {
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.list-card {
+  text-decoration: none;
+  color: white;
+
+  h2 {
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+  }
+}
+
+.list-movies {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.movie-thumb {
+  width: 120px;
+
+  img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+  }
+
+  p {
+    font-size: 0.75rem;
+    margin-top: 6px;
+    color: #ccc;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+  }
+}
